@@ -1,6 +1,6 @@
 //Operadores Ternarios
 
-let edad = prompt("por favor ingresa tu edad para registrarte, debes ser mayor a 18 ")
+let edad = parseInt(prompt("por favor ingresa tu edad para registrarte, debes ser mayor a 18 "))
 
 edad > 18 ? alert("Puedes Continuar con el registro") : alert("Eres Menor, no puedes continuar con el registro")
 
