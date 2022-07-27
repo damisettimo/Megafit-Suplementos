@@ -23,7 +23,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <!-- Titulo de pagina y navegador-->
-          <a class="navbar-brand" href="index.html"><h1>MegaFit-Sup</h1></a>
+          <a class="navbar-brand" href="./index.html"><h1>MegaFit-Sup</h1></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -36,7 +36,7 @@
                 <a class="nav-link active" aria-current="page" href="">Nosotros</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./afiliate.html">afiliate</a>
+                <a class="nav-link active" aria-current="page" href="afiliate.html">afiliate</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="">Contacto</a>
@@ -54,62 +54,53 @@
           </div>
         </div>
       </nav>
-      <section>
-                <!-- Carousel Propaganda-->
-               <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="./img/suplementos_3 (1).jpg" class="img-carousel" alt="Campeon nob 1974">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="./img/suplementos_3 (2).jpg" class="img-carousel" alt="Campeon nob 1987/88">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="./img/suplementos_3 (3).jpg" class="img-carousel" alt="Campeon nob 1990">
-                  </div>
-                  
-                  
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-
-      </section>
-    
-    
-    <!-- Tienda -->
-    <section class="tienda">
-        <h1 id="titulo" class="titulo">Tienda Online</h1>
-        <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
-    </section>
-    <!-- Contenedor de Productos y Carrito JS-->
-    <main id="contenedor-productos">
-
-    </main>
-
-    <div class="modal-contenedor">
-        <div class="modal-carrito">
-            <h3>Carrito</h3>
-            <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
-            <div id="carrito-contenedor">
-                <!-- <div class="productoEnCarrito">
-                    <p>Buzo 1</p>
-                    <p>Precio: $1200</p>
-                    <button class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
-                </div> -->
-            </div>
-            <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
-            <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
-        </div>
-    </div>
+        <section class="fondounite">
+              <!-- FOrmulario de adhesion-->
+              <form id="registro" action="damisettimo@gmail.com" class="formunob">
+          
+         
+                <label>Nombre:</label><br>
+              <input type="text" placeholder="ingresa tu nombre" name="nombre" id="nombre" required/><br>
+              <br>   
+          
+              <label>Apellido:</label><br>
+              <input type="text" placeholder="ingresa tu apellido" name="apellido" id="apellido" required/><br>
+              <br>
+          
+              <label>Contraseña</label><br>
+              <input type="text" placeholder="mayor a 6 digitos" name="contraseña" id="clave"  required/><br>
+              <br>
+              <label class="sexo">Sexo:</label><br>
+              <input class="masculino" type="radio" name="sexo">Masculino
+              <input class="femenino" type="radio" name="sexo">Femenino <br>
+              <br>
+          
+              <label> Fecha de nacimiento:</label><br>
+              <input type="date" name="fecha de nacimiento"><br>
+              <br>
+      
+              <label>Correo electronico</label><br>
+              <input type="email" placeholder="tu e-mail" name="correo" id="email"><br>
+              <br>
+          
+              <label>Direccion:</label><br>
+              <input type="text" placeholder="ingresa tu direccion" name="direccion" id="direccion" required/><br>
+              <br>
+          
+              <label>Provincia:</label><br>
+              <input type="text" placeholder="ingresa tu provincia" name="provincia" id="provincia" required/><br>
+              <br>
+          
+              <label>Ciudad:</label><br>
+              <input type="text" placeholder="ingresa tu ciudad" name="ciudad" id="ciudad" required/><br>
+               <br>
+          
+              <input class="btn btn-danger" type="submit" value="Enviar"><br>
+          
+              </form>
+              
+        </section>
     <!-- Pie de Pagina -->
-    <footer>
         <footer class="bg-primary text-white text-center text-lg-start">
             <div class="container p-4">
               <div class="row">
@@ -146,11 +137,8 @@
               <a class="text-white" href="https://mdbootstrap.com/">Megafit-sup.com</a>
             </div>
           </footer>
-    </footer>
     <!-- JavaScript Bundle with Popper y Bootstrap -->
-    <script defer src="stock.js"></script>
-    <script defer src="modal.js"></script>
-    <script defer src="app.js"></script>
+    <script defer src="./afiliacion.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
 </body>

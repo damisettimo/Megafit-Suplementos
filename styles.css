@@ -179,3 +179,24 @@ p {
 .boton-eliminar:focus {
     outline: none;
 }
+
+.fondounite{
+    background-image: url("./img/gris_fondo.jpg");
+}
+
+.formunob {
+    background-image: url("./img/img_unite.jpg");
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: rgba(120, 119, 123, 0.3);
+    padding: 1.3em;
+    margin: 0 auto;
+    max-width: 25em;
+    font-weight: bold;
+    box-shadow: inset 1px  1px 22px 4px;
+  }
+
+
