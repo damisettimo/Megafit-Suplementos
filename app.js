@@ -55,18 +55,18 @@ stockProductos.forEach((producto) => {
 //Agrego a carrito
 const agregarAlCarrito = (prodId) => {
 
-    //Para aumentar la cantidad y que no se repita
+    //Para aumentar la cantidad y que no se repita.
     const existe = carrito.some (prod => prod.id === prodId) //comprobar si el elemento ya existe en el carro
 
     if (existe){ // Si ya esta en el carrito, actualizo la cantidad
-        const prod = carrito.map (prod => { //creo un nuevo arreglo e itero sobre cada curso y cuando
+        const prod = carrito.map (prod => { //crea un nuevo arreglo e itera sobre cada curso y cuando
             // map encuentre cual es el q igual al que está agregado, le suma la cantidad
             if (prod.id === prodId){
                 prod.cantidad++
             }
         })
-    } else { //AGREGAMOS EL CURSO AL CARRITO En Caso de que no este, Agrego al carrito
-        const item = stockProductos.find((prod) => prod.id === prodId)//Trabajo con las ID
+    } else { //SE AGREGA EL CURSO AL CARRITO En Caso de que no este, Agrego al carrito
+        const item = stockProductos.find((prod) => prod.id === prodId)//Trabaja con las ID
         //Una vez obtenida la ID, hago un push para agregarlo al carrito
         carrito.push(item)
     }
@@ -80,9 +80,9 @@ const agregarAlCarrito = (prodId) => {
 const eliminarDelCarrito = (prodId) => {
     const item = carrito.find((prod) => prod.id === prodId)
 
-    const indice = carrito.indexOf(item) //Busca el elemento q le pase y devuelve su indice.
+    const indice = carrito.indexOf(item) //Busca el elemento q se pasa y devuelve su indice.
 
-    carrito.splice(indice, 1) //Se pasa el indice de mi elemento ITEM y borra
+    carrito.splice(indice, 1) //Se pasa el indice de elemento ITEM y borra
     // un elemento 
     actualizarCarrito() //LLAMA A LA FUNCION CADA VEZ Q SE 
     //MODIFICA EL CARRITO
@@ -118,7 +118,7 @@ const actualizarCarrito = () => {
     
     console.log(carrito)
     precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0)
-    //Por cada producto q recorre en el carrito, al acumulador le suma la propiedad precio, con el acumulador
+    //Por cada producto que recorre en el carrito, al acumulador le suma la propiedad precio, con el acumulador
     //empezando en 0.
 
 }
