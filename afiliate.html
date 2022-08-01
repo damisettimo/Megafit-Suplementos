@@ -23,23 +23,23 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <!-- Titulo de pagina y navegador-->
-          <a class="navbar-brand" href="./index.html"><h1>MegaFit-Sup</h1></a>
+          <a id="alerta" class="navbar-brand" href="./index.html"><h1>MegaFit-Sup</h1></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="">Productos</a>
+                <a id="alerta" class="nav-link active" aria-current="page" href="">Productos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="">Nosotros</a>
+                <a id="alerta" class="nav-link active" aria-current="page" href="">Nosotros</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="afiliate.html">afiliate</a>
+                <a id="alerta" class="nav-link active" aria-current="page" href="afiliate.html">afiliate</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="">Contacto</a>
+                <a id="alerta" class="nav-link active" aria-current="page" href="">Contacto</a>
               </li>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="#">Action</a></li>
@@ -56,7 +56,7 @@
       </nav>
         <section class="fondounite">
               <!-- FOrmulario de adhesion-->
-              <form id="registro" action="damisettimo@gmail.com" class="formunob">
+              <form id="registro" class="formunob">
           
          
                 <label>Nombre:</label><br>
@@ -94,10 +94,11 @@
               <label>Ciudad:</label><br>
               <input type="text" placeholder="ingresa tu ciudad" name="ciudad" id="ciudad" required/><br>
                <br>
-          
-              <input class="btn btn-danger" type="submit" value="Enviar"><br>
+                
+              <input id="btnafililiacion" class="btn btn-danger" type="submit" value="Enviar"><br>
           
               </form>
+              <img id="publicidad" src="./img/starnut.jpg" alt="">
               
         </section>
     <!-- Pie de Pagina -->
@@ -138,8 +139,12 @@
             </div>
           </footer>
     <!-- JavaScript Bundle with Popper y Bootstrap -->
-    <script defer src="./afiliacion.js"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./alerta.js"></script>
+    <script src="./afiliacion.js"></script>
 
 </body>
 </html>

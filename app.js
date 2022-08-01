@@ -18,12 +18,32 @@ document.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('carrito')){
         carrito = JSON.parse(localStorage.getItem('carrito'))
         actualizarCarrito()
+        
+        
     }
 })
 //Boton Vaciar
 botonVaciar.addEventListener('click', () => {
+    
+    
     carrito.length = 0
-    actualizarCarrito()
+    Swal.fire({
+        title: 'Estas seguro de que desea vaciar el carrito?',
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: 'Si',
+        denyButtonText: `No`,
+      }).then((result) => {
+        if (result.isConfirmed) {
+            actualizarCarrito()
+             Swal.fire('Carrito vacio!', '', 'success')
+        } else if (result.isDenied) {
+          Swal.fire('Continua con tu compra', '', 'info')
+        }
+      })
+
+    
+     
 })
 
 //Agregando etiquetas a HTML
@@ -47,6 +67,14 @@ stockProductos.forEach((producto) => {
     boton.addEventListener('click', () => {
         
         agregarAlCarrito(producto.id)
+        Swal.fire({
+            title: 'Excelente!',
+            text: 'Producto agregado a carrito.',
+            imageUrl: './img/ok1.jpg',
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: 'Custom image',
+          })
         
     })
 })
@@ -86,6 +114,7 @@ const eliminarDelCarrito = (prodId) => {
     // un elemento 
     actualizarCarrito() //LLAMA A LA FUNCION CADA VEZ Q SE 
     //MODIFICA EL CARRITO
+    Swal.fire('El Producto seleccionado fue eliminado del carrito.')
     console.log(carrito)
 }
 

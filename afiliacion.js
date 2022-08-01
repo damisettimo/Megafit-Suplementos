@@ -1,9 +1,17 @@
-//Operadores Ternarios
+
+//Operador Ternario pregunta si es mayor de edad para registrar formulario de adhesion
 
 let edad = parseInt(prompt("por favor ingresa tu edad para registrarte, debes ser mayor a 18 "))
 
-edad > 18 ? alert("Puedes Continuar con el registro") : alert("Eres Menor, no puedes continuar con el registro")
-
+edad > 18 ? Swal.fire(
+  'Eres Mayor!',
+  'puedes continuar',
+  'success'
+) : Swal.fire(
+  'Eres menor!',
+  'lo sentimos no puedes continuar',
+  'error'
+)
 // Desafio incorporando eventos//
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -50,7 +58,19 @@ document.addEventListener("DOMContentLoaded", function() {
     
     
     
-    this.submit();
-    alert("Te uniste a NewellsFan FELICITACIONES!!")
+    this.submit();//Completando suscripcion deriva a ventana de SweetAlert
+    Swal.fire({
+      title: 'Gracias por confiar en nosotros!',
+      text: 'Ya eres parte de Megafit',
+      imageUrl: './img/aplauso.jpg',
+      imageWidth: 400,
+      imageHeight: 200,
+      imageAlt: 'Custom image',
+      timer: 3000
+  })
+
+
+  
   }
   
+ 
